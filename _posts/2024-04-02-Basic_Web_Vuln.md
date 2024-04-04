@@ -1,16 +1,12 @@
 ---
 title: Basic Web Vulnerabilities
 categories: [Hacking, Web]
-tags: [xss, web, hacking, webhaking, spl]
+tags: [xss, web, hacking, webhaking, sql]
 ---
-
-
 
 기초적인 web hacking에서 일어나는 취약점 및 공격 방법들을 정리해보고자 한다.
 
 커리큘럼은 dreamhack을 따른다.
-
-
 
 ## XSS (Cross Site Scripting)
 
@@ -19,8 +15,6 @@ tags: [xss, web, hacking, webhaking, spl]
 웹 사이트의 관리자가 아닌 사람도 웹 페이지에 스크립트를 삽입할 수 있는 취약점을 일컫는다.
 
 주로 사용자가 입력한 값을 검증하지 않을 때 취약점이 발생되며, 이를 통해 사용자의 정보(쿠키, 세션) 탈취나 비정상적인 기능이 수행될 수 있다.
-
-
 
 ### 종류
 
@@ -32,22 +26,14 @@ tags: [xss, web, hacking, webhaking, spl]
 
 공격자가 정상적인 페이지에 세션 탈취가 가능한 악의적인 스크립트를 삽입해두고 저장하였을 때, 다른 사용자가 이 페이지에 들어가게 된다면 스크립트의 실행으로 해당 사용자의 세션id가 탈취된다.
 
-
-
 #### Reflected XSS
 
 가장 많이 쓰이는 기법이며, 서버가 악성 스크립트가 담긴 요청을 출력할 때 생긴다. URL에 악의적인 구문을 삽입하거나 클라이언트가 검색한 문자열이 URL에 포함될 때 해당 취약점을 이용할 수 있다. 하지만 이용자가 직접 링크를 보내는 경우엔 눈치 챌 수 있기 때문에 Click Jacking, Open Redirect 등의 다른 취약점과 함께 쓰인다.
-
-
 
 #### DOM-based XSS
 
 악성 스크립트가 URL Fragment에 삽입되는 기법이다.
 
-
-
 #### Universal XSS
 
 클라이언트의 브라우저 혹은 브라우저의 플러그인에서 발생하는 취약점으로 SOP 정책을 우회하는 기법이다.
-
-
