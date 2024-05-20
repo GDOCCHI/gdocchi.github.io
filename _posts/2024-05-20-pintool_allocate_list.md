@@ -6,11 +6,11 @@ image: ../assets/img/3S/pintool_1.jpg
 
 ---
 
-이번엔 pin tool을 이용하여 동적으로 할당 (해당 구현에서는 malloc만) 되는 메모리들에 대해 사이즈와 주소들을 관리해주는 후킹 함수를 pin tool 을 통해 구현해보고자 한다.
+**이번엔 pin tool을 이용하여 동적으로 할당 (해당 구현에서는 malloc만) 되는 메모리들에 대해 사이즈와 주소들을 관리해주는 후킹 함수를 pin tool 을 통해 구현해보고자 한다.**
 
 <br />
 
-## RTN
+## **RTN**
 
 RTN은 일반적으로 C와 같은 절차적 프로그래밍 언어용 컴파일러에서 생성되는 함수/루틴/프로시저를 나타낸다. Pin은 기호 테이블 정보를 사용하여 루틴을 찾는다. 기호 테이블 정보를 사용할 수 있도록 **[PIN_InitSymbols()](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/group__PIN__CONTROL.html#ga5a74f4530db5d94bede1391c59e39939)** 를 호출해야 한다. 계측시간 및 분석시간에 접근 가능하다.
 
@@ -20,7 +20,7 @@ RTN은 일반적으로 C와 같은 절차적 프로그래밍 언어용 컴파일
 
 --- 
 
-## 구조체를 이용하여 size 0~0x30까지만 관리하는 간단한 구현
+## **구조체를 이용하여 size 0~0x30까지만 관리하는 간단한 구현**
 
 ### 전체 code
 
@@ -212,7 +212,7 @@ ADDRINT SIZE;
 
 ---
 
-## 실제 구현
+## **실제 구현**
 
 ### 계측 할 Source Code
 
