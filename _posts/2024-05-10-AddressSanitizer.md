@@ -14,13 +14,13 @@ image: ../assets/img/3S/ASan.png
 - [Alloc and dealloc mismatches](https://learn.microsoft.com/en-us/cpp/sanitizers/error-alloc-dealloc-mismatch?view=msvc-170)
 - [Error: new-delete-type-mismatch](https://learn.microsoft.com/en-us/cpp/sanitizers/error-new-delete-type-mismatch?view=msvc-170)
 - [Allocations too large for the heap](https://learn.microsoft.com/en-us/cpp/sanitizers/error-allocation-size-too-big?view=msvc-170)
-- [calloc overflow]([Error: calloc-overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-calloc-overflow?view=msvc-170)) and [alloca overflow]
-- ([Error: dynamic-stack-buffer-overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-dynamic-stack-buffer-overflow?view=msvc-170))
+- [calloc overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-calloc-overflow?view=msvc-170)
+- [Error: dynamic-stack-buffer-overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-dynamic-stack-buffer-overflow?view=msvc-170)
 - [Double free](https://learn.microsoft.com/en-us/cpp/sanitizers/error-double-free?view=msvc-170) and [use after free](https://learn.microsoft.com/en-us/cpp/sanitizers/error-heap-use-after-free?view=msvc-170)
 - [Global variable overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-global-buffer-overflow?view=msvc-170)
 - [Heap buffer overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-heap-buffer-overflow?view=msvc-170)
 - [Invalid alignment of aligned values](https://learn.microsoft.com/en-us/cpp/sanitizers/error-invalid-allocation-alignment?view=msvc-170)
-- [memcpy](<https://learn.microsoft.com/en-us/cpp/sanitizers/error-memcpy-param-overlap?view=msvc-170>) and [strncat parameter overlap]
+- [memcpy](<https://learn.microsoft.com/en-us/cpp/sanitizers/error-memcpy-param-overlap?view=msvc-170>)
 - [Error: strncat-param-overlap](https://learn.microsoft.com/en-us/cpp/sanitizers/error-strncat-param-overlap?view=msvc-170)
 - [Stack buffer overflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-stack-buffer-overflow?view=msvc-170) and [underflow](https://learn.microsoft.com/en-us/cpp/sanitizers/error-stack-buffer-underflow?view=msvc-170)
 - [Stack use after return](https://learn.microsoft.com/en-us/cpp/sanitizers/error-stack-use-after-return?view=msvc-170) and [use after scope](https://learn.microsoft.com/en-us/cpp/sanitizers/error-stack-use-after-scope?view=msvc-170)
