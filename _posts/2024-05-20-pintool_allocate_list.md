@@ -9,6 +9,7 @@ image: ../assets/img/3S/pintool_1.jpg
 **이번엔 pin tool을 이용하여 동적으로 할당 (해당 구현에서는 malloc만) 되는 메모리들에 대해 사이즈와 주소들을 관리해주는 후킹 함수를 pin tool 을 통해 구현해보고자 한다.**
 
 
+
 --- 
 
 
