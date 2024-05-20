@@ -246,7 +246,7 @@ int main()
 
 해당 소스 코드를 보호 기법을 다 해제되도록 컴파일 해준 후 실행시켜보자.
 
-![Untitled](../assets/img/3S/pintool_3.png)
+![Untitled](../assets/img/3S/pintool_3.png){: width="500px"}
 
 각 size별로 실제 할당된 사이즈와 주소가 구분되어 출력되는 것을 확인할 수 있다.
 
