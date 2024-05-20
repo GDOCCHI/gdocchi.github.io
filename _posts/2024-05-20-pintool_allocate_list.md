@@ -242,11 +242,11 @@ int main()
 
 ### 실행
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/01c5cc9b-20ab-4de8-9a21-bb5308b15d63/Untitled.png)
+![Untitled](../assets/img/3S/pintool_2.png)
 
 해당 소스 코드를 보호 기법을 다 해제되도록 컴파일 해준 후 실행시켜보자.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/5e45c3e6-f07a-4386-91e4-c806074f8cca/Untitled.png)
+![Untitled](../assets/img/3S/pintool_3.png)
 
 각 size별로 실제 할당된 사이즈와 주소가 구분되어 출력되는 것을 확인할 수 있다.
 
