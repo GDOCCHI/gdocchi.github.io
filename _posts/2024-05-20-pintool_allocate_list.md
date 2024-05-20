@@ -6,23 +6,21 @@ image: ../assets/img/3S/pintool_1.jpg
 
 ---
 
-**이번엔 pin tool을 이용하여 동적으로 할당 (해당 구현에서는 malloc만) 되는 메모리들에 대해 사이즈와 주소들을 관리해주는 후킹 함수를 pin tool 을 통해 구현해보고자 한다.**
+이번엔 pin tool을 이용하여 동적으로 할당 (해당 구현에서는 malloc만) 되는 메모리들에 대해 사이즈와 주소들을 관리해주는 후킹 함수를 pin tool 을 통해 구현해보고자 한다.
 
+<br />
 
-
---- 
-
-
-## **RTN**
+## RTN
 
 RTN은 일반적으로 C와 같은 절차적 프로그래밍 언어용 컴파일러에서 생성되는 함수/루틴/프로시저를 나타낸다. Pin은 기호 테이블 정보를 사용하여 루틴을 찾는다. 기호 테이블 정보를 사용할 수 있도록 **[PIN_InitSymbols()](https://software.intel.com/sites/landingpage/pintool/docs/98830/Pin/doc/html/group__PIN__CONTROL.html#ga5a74f4530db5d94bede1391c59e39939)** 를 호출해야 한다. 계측시간 및 분석시간에 접근 가능하다.
+
 (intel pin tool manual)
 
 <br />
 
 --- 
 
-## **구조체를 이용하여 size 0~0x30까지만 관리하는 간단한 구현**
+## 구조체를 이용하여 size 0~0x30까지만 관리하는 간단한 구현
 
 ### 전체 code
 
@@ -176,7 +174,7 @@ VOID Image(IMG img, VOID *v)
    
    후킹된 함수의 인수(argument)값을 가져온다.
    
-   가져올 인수를 지정할 수 있는데, 첫 번째 인수는 `IARG_FUNCARG_ENTRYPOINT_VALUE, 0` 로 시작하여 뒤의 숫자에 따라 가져오는 인수의 위치가 달라진다.
+   가져올 인수를 지정할 수 있는데, 첫 번째 인수는 `IARG_FUNCARG_ENTRYPOINT_VALUE, 0` ****로 시작하여 뒤의 숫자에 따라 가져오는 인수의 위치가 달라진다.
 
 2. `IARG_FUNCRET_EXITPOINT_VALUE`
    
@@ -214,9 +212,7 @@ ADDRINT SIZE;
 
 ---
 
-
-
-## **실제 구현**
+## 실제 구현
 
 ### 계측 할 Source Code
 
@@ -246,11 +242,11 @@ int main()
 
 ### 실행
 
-![Untitled](../assets/img/3S/pintool_2.png)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/01c5cc9b-20ab-4de8-9a21-bb5308b15d63/Untitled.png)
 
 해당 소스 코드를 보호 기법을 다 해제되도록 컴파일 해준 후 실행시켜보자.
 
-![Untitled](../assets/img/3S/pintool_3.png){: width="500px"}
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/5e45c3e6-f07a-4386-91e4-c806074f8cca/Untitled.png)
 
 각 size별로 실제 할당된 사이즈와 주소가 구분되어 출력되는 것을 확인할 수 있다.
 
