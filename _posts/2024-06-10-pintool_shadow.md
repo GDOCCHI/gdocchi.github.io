@@ -58,7 +58,7 @@ image: ../assets/img/3S/shad.png
 
 ![Untitled](../assets/img/3S/Ipoint.png)
 
-
+ 
 ## Detection BOF Code (Final)
 
 ---
