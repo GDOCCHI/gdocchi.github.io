@@ -56,7 +56,8 @@ image: ../assets/img/3S/shad.png
 
 ### 4. IPOINT
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/64589bea-f6ce-4ee1-94c8-bad0588018d3/Untitled.png)
+![Untitled](../assets/img/3S/Ipoint.png)
+
 
 ## Detection BOF Code (Final)
 
