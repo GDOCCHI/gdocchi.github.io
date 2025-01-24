@@ -2,7 +2,7 @@
 title: Pin Tool [Shadow Stack]
 categories: [Project, 3S]
 tags: [intel, cet, shadowstack, stack, ibt, indirectbranchtracking]
-image: ../assets/img/3S/Shad.jpeg
+image: ../assets/img/3S/shad.jpg
 ---
 
 
