@@ -1,11 +1,11 @@
- 
-
-```yaml
-title: Pintool로 구현한 Shadow Stack
+---
+title: Pin Tool [Shadow Stack]
 categories: [Project, 3S]
 tags: [intel, cet, shadowstack, stack, ibt, indirectbranchtracking]
 image: ../assets/img/3S/shad.png
-```
+---
+
+
 
 ## 기본 개념
 
@@ -56,7 +56,8 @@ image: ../assets/img/3S/shad.png
 
 ### 4. IPOINT
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/57749aec-4422-4d95-b493-aa606e04dfbb/64589bea-f6ce-4ee1-94c8-bad0588018d3/Untitled.png)
+![Untitled](../assets/img/3S/Ipoint.png)
+
 
 ## Detection BOF Code (Final)
 
@@ -266,7 +267,7 @@ int main(int argc, char *argv[])
 
 **3_1차 실패작 → but, 이유 찾아냄**
 
-```bash
+```cpp
 #include <iostream>
 #include <stack>
 #include "pin.H"
@@ -342,7 +343,7 @@ int main(int argc, char* argv[])
 
 완성된 최종본을 살펴보면,
 
-**3-2 최종본.**
+**3-2 최종본.** 
 
 ```cpp
 #include <iostream>
