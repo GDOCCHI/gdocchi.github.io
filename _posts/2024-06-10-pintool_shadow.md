@@ -58,54 +58,6 @@ image: ../assets/img/3S/shad.jpg
 
 ![Untitled](../assets/img/3S/Ipoint.png)
 
- 
-## Detection BOF Code (Final)
-
----
-
-```cpp
-#include <iostream>
-#include <stack>
-#include "pin.H"
-
-std::stack<ADDRINT> shadowStack;
-
-VOID BeforeCall(ADDRINT sp)
-{
-    shadowStack.push(sp);
-}
-
-VOID AfterCall(ADDRINT sp)
-{
-    if (sp != shadowStack.top())
-    {
-        std::cout << "Buffer Overflow Detected!" << std::endl;
-        PIN_ExitProcess(1);
-    }
-    shadowStack.pop();
-}
-
-VOID Instruction(INS ins, VOID* v)
-{
-    if (INS_IsCall(ins))
-    {
-        INS_InsertCall(ins, IPOINT_BEFORE, (AFUNPTR)BeforeCall,
-                       IARG_REG_VALUE, REG_STACK_PTR, IARG_END);
-
-        INS_InsertCall(ins, IPOINT_AFTER, (AFUNPTR)AfterCall,
-                       IARG_REG_VALUE, REG_STACK_PTR, IARG_END);
-    }
-}
-
-int main(int argc, char* argv[])
-{
-    PIN_Init(argc, argv);
-    INS_AddInstrumentFunction(Instruction, 0);
-    PIN_StartProgram();
-
-    return 0;
-}
-```
 
 ## Instruction Func
 
