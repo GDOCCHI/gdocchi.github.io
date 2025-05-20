@@ -1,21 +1,18 @@
 ---
-title: Packer 분석 2 [Anti Anti Attach]
+title: Packer 분석 2 [Anti Anti Debugging]
 categories: [Project, HSPACE]
-tags: [Packer, Themida, VMProtect, Debugger, Window, Anti, Anti-Attach, Anti-Debugging]
+tags: [Packer, Themida, VMProtect, Debugger, Window, Anti, Anti-Debugging]
 image: ../assets/img/Packer/VM_banner.png
 published: false
 ---
 
-이전 포스팅에서는 VMProtect를 적용한 파일에서 이루어지는 코드 가상화에 대해서 분석해보았다. Packer들은 이같은Anti Debugging기법들을 많이 사용하는데, 이번 포스팅에서는 그 중에서 Anti Attach에 대해 분석해보자 한다.
+이전 포스팅에서는 VMProtect를 적용한 파일에서 이루어지는 코드 가상화에 대해서 분석해보았다. Packer들은 이같은 Anti Debugging기법들을 많이 사용하는데, 이번 포스팅에서는 Anti Debugging에 대해 알아보기로 해보자.
 
-## Anti Attach
+## Anti Debugging
 
 ---
 
-**Anti-Attach**는 디버거가 실행 중인 프로세스에 **attach** 하는 것을 사전에 **차단하는 기술**이다.  
-이는 **안티 디버깅(Anti-Debugging)** 기법의 하위 범주로, 분석 도구가 프로세스 내부 상태를 관찰하거나 조작하지 못하도록 설계된다.
-
-해당 기술에는 굉장히 많은 기법들이 존재하는데, 이번에도 직접 Anti Attach 실습 자료를 만들어서 우회해보는 방식으로 진행할 것이다.
+**Anti-debugging**이란 프로그램이 디버거에 의해 분석되는 것을 방지하거나 어렵게 만드는 기술이다. 개발자들은 이 기술을 통해 자신의 코드를 보호하고, 역공학(리버스 엔지니어링)으로부터 프로그램의 내부 로직을 숨긴다.
 
 ## Build
 
@@ -23,7 +20,7 @@ published: false
 
 ### exe 파일 생성
 
-우선 Anti Attach 실습을 진행하기 이전에 실습할 프로그램 및 실제 Anti Attach가 일어나면 어떻게 감지되는지 확인해보기 위해 exe파일을 제작해준다.
+우선 Anti Debugging 실습을 진행하기 이전에 실습할 프로그램 및 실제 Anti Debugging 일어나면 어떻게 감지되는지 확인해보기 위해 exe파일을 제작해준다.
 
 필자는 Visual studio 2022를 이용하여 빌드하였으며, 프로젝트 생성 후 exe 파일 빌드 과정을 요약하자면 다음과 같다. 
 
@@ -61,7 +58,7 @@ published: false
 
 [Exeinfo PE 0.0.8.8을 위한 Windows을 다운로드하세요 Uptodown.com](https://exeinfo-pe.kr.uptodown.com/windows/download)
 
-## Anti Attach
+## Anti Debugging
 
 대표적인 아래 기법들을 우회하는 방향으로 진행해보고자 한다.
 
@@ -85,7 +82,8 @@ Themida 자체에는 너무 많은 기능이 존재하기 때문에, 예제 프�
 4. 0xCC Detection
 
 이번 포스팅은 Static 기법을 중점으로 우회해볼 것이다.
-## Anti Anti Attach
+
+## Anti Anti Debugging
 
 ---
 
@@ -709,6 +707,8 @@ function overrideReturn(mod, name, fakeRetval) {
 }
 overrideReturn("kernel32.dll", "CheckRemoteDebuggerPresent", 1);
 ```
+
+![Image](https://github.com/user-attachments/assets/9925974b-3274-4c06-9446-1fdceb77703e)
 
 모두 우회되는 것을 확인할 수 있다.
 
